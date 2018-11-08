@@ -9,7 +9,7 @@ import urllib2
 # Change to your own account information
 to = 'user@gmail.com'
 gmail_user = 'alexcbeaglebone@gmail.com'
-gmail_password = 'FanshaweCollege!'
+gmail_password = 'password' #insert real sender's gmail password here
 smtpserver = smtplib.SMTP('smtp.gmail.com', 587)
 smtpserver.ehlo()
 smtpserver.starttls()
