@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# modified from http://elinux.org/RPi_Email_IP_On_Boot_Debian
 import subprocess
 import smtplib
 import socket
