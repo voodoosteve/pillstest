@@ -1,1 +1,29 @@
 
+import time
+import RPi.GPIO as GPIO
+import Picamera
+import datetime
+import os
+
+os.chdir('/home/pi/directory')
+cam = picamera.Picamera()
+
+GPIO.setmode (GPIO.BCM)
+
+pir_pin = 4
+
+GPIO.setup pir_pin, GPIO.IN)
+
+While True:
+if GPIO.input (pir_pin):
+filename = datetime.datetime.now() .strftime ("%Y-%m-%d-%H.%M.%S.jpg")
+print ("MOTION DETECTED")
+cam.start_preview ()
+cam.capture (filename)
+print ("CAPTURED %s" % filename)
+cam.stop_preview ()
+time.sleep (5)
+
+else:
+print ("AWAITING MOTION")
+time.sleep (0.2)
